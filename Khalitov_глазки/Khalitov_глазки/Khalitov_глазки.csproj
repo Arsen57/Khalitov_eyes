@@ -35,9 +35,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -59,9 +68,63 @@
     <Compile Include="AddEditPage.xaml.cs">
       <DependentUpon>AddEditPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Agent.cs">
+      <DependentUpon>KhalitovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AgentPriorityHistory.cs">
+      <DependentUpon>KhalitovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AgentType.cs">
+      <DependentUpon>KhalitovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhalitovModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KhalitovModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhalitovModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KhalitovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhalitovModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KhalitovModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Manager.cs" />
-    <Compile Include="ServiceEyesPage.xaml.cs">
-      <DependentUpon>ServiceEyesPage.xaml</DependentUpon>
+    <Compile Include="Material.cs">
+      <DependentUpon>KhalitovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialCountHistory.cs">
+      <DependentUpon>KhalitovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialType.cs">
+      <DependentUpon>KhalitovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>KhalitovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCostHistory.cs">
+      <DependentUpon>KhalitovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductMaterial.cs">
+      <DependentUpon>KhalitovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSale.cs">
+      <DependentUpon>KhalitovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductType.cs">
+      <DependentUpon>KhalitovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AgentPage.xaml.cs">
+      <DependentUpon>AgentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shop.cs">
+      <DependentUpon>KhalitovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <DependentUpon>KhalitovModel.tt</DependentUpon>
     </Compile>
     <Page Include="AddEditPage.xaml">
       <SubType>Designer</SubType>
@@ -79,7 +142,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ServiceEyesPage.xaml">
+    <Page Include="AgentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -102,6 +165,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="KhalitovModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>KhalitovModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="KhalitovModel.edmx.diagram">
+      <DependentUpon>KhalitovModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -115,6 +186,22 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Глазки-save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="KhalitovModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>KhalitovModel.Context.cs</LastGenOutput>
+      <DependentUpon>KhalitovModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="KhalitovModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KhalitovModel.edmx</DependentUpon>
+      <LastGenOutput>KhalitovModel.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Resources\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,7 +23,7 @@ namespace Khalitov_глазки
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new ServiceEyesPage());
+            MainFrame.Navigate(new AgentPage());
             Manager.MainFrame = MainFrame;
         }
 
