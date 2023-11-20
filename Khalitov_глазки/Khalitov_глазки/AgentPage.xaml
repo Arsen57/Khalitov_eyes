@@ -74,12 +74,12 @@
                                 <Binding Path="Logo">
                                     <Binding.TargetNullValue>
                                         <ImageSource>
-                                            Resources/picture.png
+                                            agents/picture.png
                                         </ImageSource>
                                     </Binding.TargetNullValue>
                                 </Binding>
                             </Image.Source>
-                        </Image>
+                        </Image> 
                         <StackPanel Orientation="Horizontal" Grid.Column="1">
                             <TextBlock Text="{Binding AgentTypeString}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="25"></TextBlock>
                             <TextBlock Text=" | " FontSize="20"></TextBlock>
