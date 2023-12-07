@@ -93,6 +93,9 @@
       <DependentUpon>KhalitovModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Manager.cs" />
+    <Compile Include="AgentPage.xaml.cs">
+      <DependentUpon>AgentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Material.cs">
       <DependentUpon>KhalitovModel.tt</DependentUpon>
     </Compile>
@@ -116,9 +119,6 @@
     </Compile>
     <Compile Include="ProductType.cs">
       <DependentUpon>KhalitovModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AgentPage.xaml.cs">
-      <DependentUpon>AgentPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -320,19 +320,22 @@
     <Resource Include="agents\agent_98.png" />
     <Resource Include="agents\agent_99.png" />
     <Resource Include="agents\picture.png" />
+    <Resource Include="Images\Глазки-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="KhalitovModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>KhalitovModel.Context.cs</LastGenOutput>
       <DependentUpon>KhalitovModel.edmx</DependentUpon>
+      <LastGenOutput>KhalitovModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="KhalitovModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>KhalitovModel.edmx</DependentUpon>
       <LastGenOutput>KhalitovModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

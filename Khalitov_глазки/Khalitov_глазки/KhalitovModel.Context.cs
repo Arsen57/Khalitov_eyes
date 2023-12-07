@@ -12,7 +12,7 @@ namespace Khalitov_глазки
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-
+    
     public partial class Khalitov_глазкиEntities : DbContext
     {
         //добавлено
@@ -26,7 +26,7 @@ namespace Khalitov_глазки
             return _context;
         }
         //добавлено
-        
+
         public Khalitov_глазкиEntities()
             : base("name=Khalitov_глазкиEntities")
         {

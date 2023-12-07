@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ed1e41f7aedf4bc88d3e3cb135faa321" Name="Diagram1">
+      <Diagram DiagramId="0faecb6471d64753a751668cb5020b16" Name="Diagram1">
         <EntityTypeShape EntityType="Khalitov_глазкиModel.Agent" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
         <EntityTypeShape EntityType="Khalitov_глазкиModel.AgentPriorityHistory" Width="1.5" PointX="5.25" PointY="16.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Khalitov_глазкиModel.AgentType" Width="1.5" PointX="0.75" PointY="14.25" IsExpanded="true" />

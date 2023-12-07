@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Khalitov_глазки"
         mc:Ignorable="d"
-        Title="Khalitov_глазки-save" MinHeight="450" MinWidth="800" FontFamily="Tw Cen MT" Icon="Resources/Глазки-save.ico">
+        Title="Khalitov_глазки-save" MinHeight="450" MinWidth="800" FontFamily="Tw Cen MT" Icon="Images/Глазки-save.png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="75"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <Image Source="Resources/Глазки-save.png" HorizontalAlignment="Left" ></Image>
-        <TextBlock Text="Список агентов" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Image Source="Images/Глазки-save.png" HorizontalAlignment="Left" ></Image>
+        <TextBlock Text="Глазки-Save" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
         <Frame Grid.Row="1" Name="MainFrame" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden"></Frame>
         <Button Content="Назад" Name="BtnBack" Width="175" Height="30" HorizontalAlignment="Right" Margin="5"
                 Click="BtnBack_Click" Background="#FFB175EE"></Button>
