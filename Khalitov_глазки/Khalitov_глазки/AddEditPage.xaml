@@ -34,6 +34,9 @@
             <TextBlock Text="Директор" FontSize="15" Height="20" MinWidth="120" Width="auto" Margin="5"></TextBlock>
             <TextBox Text="{Binding DirectorName}" FontSize="15" Height="20" Width="400"></TextBox>
         </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="4" Orientation="Horizontal">
+            <Button Name="ProdViewButton" Content="Посмотреть историю" Margin="10" Width="200" Click="ProdViewButton_Click"></Button>
+        </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Vertical" Grid.RowSpan="4">
             <TextBlock Text="Логотип" FontSize="15" Height="20" Width="auto" Margin="5"></TextBlock>
             <Image Name="LogoImage" Stretch="UniformToFill" MinHeight="50" Height="100" Width="100" HorizontalAlignment="Center" Margin="5">
@@ -89,6 +92,7 @@
             <TextBlock Text="e-mail" FontSize="15" Height="20" Width="100" Margin="5"></TextBlock>
             <TextBox Text="{Binding Email}" FontSize="15" Height="20" Width="200"></TextBox>
         </StackPanel>
+        
 
         <StackPanel Grid.Column="1" Grid.Row="6" Orientation="Horizontal">
             <Button Content="Сохранить" Name="SaveBtn" Click="SaveBtn_Click" Margin="5"></Button>

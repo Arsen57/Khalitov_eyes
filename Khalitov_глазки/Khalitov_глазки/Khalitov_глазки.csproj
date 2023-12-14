@@ -68,6 +68,9 @@
     <Compile Include="AddEditPage.xaml.cs">
       <DependentUpon>AddEditPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddProdSale.xaml.cs">
+      <DependentUpon>AddProdSale.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Agent.cs">
       <DependentUpon>KhalitovModel.tt</DependentUpon>
     </Compile>
@@ -105,6 +108,12 @@
     <Compile Include="MaterialType.cs">
       <DependentUpon>KhalitovModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="PriorityEdit.xaml.cs">
+      <DependentUpon>PriorityEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProdPage.xaml.cs">
+      <DependentUpon>ProdPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>KhalitovModel.tt</DependentUpon>
     </Compile>
@@ -135,6 +144,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AddProdSale.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -148,6 +161,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="AgentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PriorityEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProdPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

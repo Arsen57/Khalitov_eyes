@@ -11,7 +11,9 @@ namespace Khalitov_глазки
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Windows.Media;
+    using System.Xml.Schema;
+
     public partial class Agent
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -47,6 +49,79 @@ namespace Khalitov_глазки
             get
             {
                 return AgentType.Title;
+            }
+        }
+
+        public int Sales
+        {
+            get
+            {
+               int total = 0;
+                foreach (ProductSale productSales in this.ProductSale)
+                {
+                    total += productSales.ProductCount * Convert.ToInt32(productSales.Product.MinCostForAgent);
+                }
+                return total;
+            }
+        }
+
+        public int SalePercent
+        {
+            get
+            {
+                int total = 0;
+                foreach (ProductSale productSales in this.ProductSale)
+                {
+                    total += productSales.ProductCount * Convert.ToInt32(productSales.Product.MinCostForAgent);
+                }
+
+                int sale = 0;
+
+                if (total > 10000 && total < 50000)
+                {
+                    sale = 5;
+                }
+                else if (total > 50000 && total < 150000)
+                {
+                    sale = 10;
+                }
+                else if (total > 150000 && total < 500000)
+                {
+                    sale = 20;
+                }
+                else if (total > 500000)
+                {
+                    sale = 25;
+                }
+
+                return sale;
+            }
+        }
+
+        public SolidColorBrush FonStyle
+        {
+            get
+            {
+                int total = 0;
+                foreach (ProductSale productSales in this.ProductSale)
+                {
+                    total += productSales.ProductCount * Convert.ToInt32(productSales.Product.MinCostForAgent);
+                }
+
+                //int sale = 0;
+                //if (total > 50000)
+                //{
+                //    sale = 10;
+                //}
+
+                if (total >= 500000)
+                {
+                    return (SolidColorBrush)new BrushConverter().ConvertFromString("LightGreen");
+                }
+                else
+                {
+                    return (SolidColorBrush)new BrushConverter().ConvertFromString("White");
+                }
             }
         }
     }

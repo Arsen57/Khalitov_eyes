@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Khalitov_глазки"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="1200"
       Title="AgentPage"
       FontFamily="Tw Cen MT"
       IsVisibleChanged="Page_IsVisibleChanged">
@@ -66,15 +66,16 @@
 
         <Button Content="Добавить агента" Name="AddButton" Click="AddButton_Click"
                 HorizontalAlignment="Right" VerticalAlignment="Bottom"></Button>
-        <ListView Name="AgentListView" Grid.Row="2">
+        <Button Name="PriorityButton" Content="Изменить приоритет" Click="PriorityButton_Click" Visibility="Hidden"></Button> 
+        <ListView Name="AgentListView" Grid.Row="2" SelectionMode="Extended" SelectionChanged="AgentListView_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
+                    <Grid Background="{Binding FonStyle}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"></ColumnDefinition>
-                            <ColumnDefinition Width="500"></ColumnDefinition>
+                            <ColumnDefinition Width="950"></ColumnDefinition>
                             <ColumnDefinition Width="*"></ColumnDefinition>
-                            <ColumnDefinition Width="200"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Image Width="150" Height="100" Grid.Column="0" Grid.RowSpan="4" Stretch="Uniform" HorizontalAlignment="Center" Margin="5">
                             <Image.Source>
@@ -87,17 +88,23 @@
                                 </Binding>
                             </Image.Source>
                         </Image> 
-                        <StackPanel Orientation="Horizontal" Grid.Column="1">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="0">
                             <TextBlock Text="{Binding AgentTypeString}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="25"></TextBlock>
                             <TextBlock Text=" | " FontSize="20"></TextBlock>
                             <TextBlock Text="{Binding Title}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right" FontSize="25"></TextBlock>
                         </StackPanel>
+                        <TextBlock Text ="{Binding SalePercent, StringFormat=Скидка {0} %}" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" FontSize="20"></TextBlock>
+                        <TextBlock Text ="{Binding Sales, StringFormat=Количество продаж за год: {0}}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" FontSize="16"></TextBlock>
                         <!--<TextBlock Text="Количество продаж" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" FontSize="15" ></TextBlock>-->
-                        <TextBlock Text="{Binding Phone}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" FontSize="15" ></TextBlock>
-                        <TextBlock Text="{Binding Priority, StringFormat=Приоритетность : {0}}" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="15"></TextBlock>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="3" Grid.Row="3">
+                        <TextBlock Text="{Binding Phone}" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="15" ></TextBlock>
+                        <TextBlock Text="{Binding Priority, StringFormat=Приоритетность : {0}}" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" FontSize="15"></TextBlock>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="2" Grid.Row="3">
                             <Button Name="EditButton" Content="Редактировать" Click="EditButton_Click" Margin="2"></Button>
                         </StackPanel>
+
+                        <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="3" Grid.Row="3">
+                            <Button Name="ProdViewButton" Content="Посмотреть историю" Margin="10" Width="200" Click="ProdViewButton_Click"></Button>
+                        </StackPanel>-->
                         <Grid.RowDefinitions>
                             <RowDefinition Height="40"/>
                             <RowDefinition Height="30"/>

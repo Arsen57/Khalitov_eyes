@@ -25,3 +25,9 @@ D:\Downloads\Khalitov_Глазки\Khalitov_глазки\Khalitov_глазки\o
 D:\Downloads\Khalitov_Глазки\Khalitov_глазки\Khalitov_глазки\obj\Debug\Khalitov_глазки.csproj.CopyComplete
 D:\Downloads\Khalitov_Глазки\Khalitov_глазки\Khalitov_глазки\obj\Debug\AgentPage.g.cs
 D:\Downloads\Khalitov_Глазки\Khalitov_глазки\Khalitov_глазки\obj\Debug\AgentPage.baml
+D:\Downloads\Khalitov_Глазки\Khalitov_глазки\Khalitov_глазки\obj\Debug\PriorityEdit.g.cs
+D:\Downloads\Khalitov_Глазки\Khalitov_глазки\Khalitov_глазки\obj\Debug\PriorityEdit.baml
+D:\Downloads\Khalitov_Глазки\Khalitov_глазки\Khalitov_глазки\obj\Debug\AddProdSale.g.cs
+D:\Downloads\Khalitov_Глазки\Khalitov_глазки\Khalitov_глазки\obj\Debug\ProdPage.g.cs
+D:\Downloads\Khalitov_Глазки\Khalitov_глазки\Khalitov_глазки\obj\Debug\AddProdSale.baml
+D:\Downloads\Khalitov_Глазки\Khalitov_глазки\Khalitov_глазки\obj\Debug\ProdPage.baml

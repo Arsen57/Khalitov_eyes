@@ -10,6 +10,7 @@
 namespace Khalitov_глазки
 {
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
@@ -50,5 +51,6 @@ namespace Khalitov_глазки
         public virtual DbSet<ProductType> ProductType { get; set; }
         public virtual DbSet<Shop> Shop { get; set; }
         public virtual DbSet<Supplier> Supplier { get; set; }
+        public static IEnumerable<Agent> SelectedItems { get; internal set; }
     }
 }
